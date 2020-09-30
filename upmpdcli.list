@@ -1,0 +1,3 @@
+deb http://www.lesbonscomptes.com/upmpdcli/downloads/debian/ buster main
+deb-src http://www.lesbonscomptes.com/upmpdcli/downloads/debian/ buster main
+
