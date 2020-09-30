@@ -15,8 +15,6 @@ RUN rm -rf /var/lib/apt/lists/*
 
 ENV UPPLAY_HOME_FOLDER=/config
 
-#RUN mkdir ${UPPLAY_HOME_FOLDER}
-
 RUN groupadd upplay -g 1024
 RUN useradd -d ${UPPLAY_HOME_FOLDER} -s /bin/bash -m upplay -u 1024 -g 1024
 
