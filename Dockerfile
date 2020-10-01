@@ -20,6 +20,8 @@ RUN useradd -d ${UPPLAY_HOME_FOLDER} -s /bin/bash -m upplay -u 1024 -g 1024
 
 USER upplay
 
+RUN mkdir -p "${UPPLAY_HOME_FOLDER}/.config/Upmpd.org"
+
 ENV HOME=${UPPLAY_HOME_FOLDER}
 ENV XDG_RUNTIME_DIR=${UPPLAY_HOME_FOLDER}
 
