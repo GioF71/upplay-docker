@@ -1,6 +1,25 @@
 # upplay-docker
 
-Open a terminal and issue the following to build the image
+## Reference
+
+First and foremost, the reference to the awesome project:
+
+https://www.lesbonscomptes.com/upmpdcli/
+
+## Prerequisites
+
+You need to have Docker up and running on a Linux machine.
+
+All of this has been tested on:
+
+- Manjaro Linux with Gnome (amd64)
+
+As I test the unit and/or the scripts on more platforms, I will update this list.
+
+
+## Usage
+
+So, just open a terminal and issue the following to build the image
 
 `docker build . -t upplay`
 
