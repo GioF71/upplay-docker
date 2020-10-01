@@ -6,4 +6,4 @@ Open a terminal and issue the following to build the image
 
 It will take a while. When it's finished, run:
 
-`docker run --rm --user $(id -u):$(id -g) -it -e DISPLAY=:0.0 --net=host --volume="${HOME}/.Xauthority":/root/.Xauthority:rw --volume ${HOME}:/config --name upplay upplay`
+`docker run --rm --user $(id -u):$(id -g) -it -e DISPLAY=:0.0 --net=host --volume="${HOME}/.Xauthority":/root/.Xauthority:rw --volume ${HOME}:/config upplay`
