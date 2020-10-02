@@ -4,7 +4,7 @@
 
 First and foremost, the reference to the awesome project:
 
-https://www.lesbonscomptes.com/upmpdcli/
+https://www.lesbonscomptes.com/upplay/
 
 ## Prerequisites
 
