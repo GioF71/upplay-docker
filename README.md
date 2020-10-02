@@ -16,7 +16,6 @@ All of this has been tested on:
 
 As I test the unit and/or the scripts on more platforms, I will update this list.
 
-
 ## Usage
 
 So, just open a terminal and issue the following to build the image
