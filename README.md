@@ -27,4 +27,4 @@ It will take a while. When it's finished, run:
 
 `docker run --rm --user $(id -u):$(id -g) -it -e DISPLAY=:0.0 --net=host --volume=${HOME}/.Xauthority:/config/.Xauthority:rw --volume ${HOME}/.config/Upmpd.org:/config/.config/Upmpd.org upplay`
 
-and it should generally work. You might need to tweak the DISPLAY variable values, and of course binding "/config/.config/Upmpd.org" is definitely not mandatory if you don't need to maintain the configuration settings.
+This command should generally work. You might need to tweak the DISPLAY variable values, and of course binding "/config/.config/Upmpd.org" is definitely not mandatory if you don't need to maintain the configuration settings.
