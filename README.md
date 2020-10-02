@@ -14,7 +14,7 @@ All of this has been tested on:
 
 - Manjaro Linux with Gnome (amd64)
 
-As I test the unit and/or the scripts on more platforms, I will update this list.
+As I test the Dockerfile on more platforms, I will update this list.
 
 ## Usage
 
