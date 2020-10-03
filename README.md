@@ -9,7 +9,7 @@ https://www.lesbonscomptes.com/upplay/
 ## Why
 
 Not all distros have a upplay package available. For arch and derived, there is an AUR package, but it does not look good at least on my Gnome desktop: borders are missing.
-And, you might not be comfortable installing an AUR package.
+Or, you might simply not be comfortable installing an AUR package.
 
 ## Prerequisites
 
