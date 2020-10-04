@@ -8,14 +8,19 @@ https://www.lesbonscomptes.com/upplay/
 
 ## Why
 
-Not all distros have a upplay package available. For arch and derived, there is an AUR package, but it does not look good at least on my Gnome desktop: borders are missing.
+Not all distros have a Upplay package available. For Arch and derived, there is an AUR package, but the application does not look good at least on my Gnome desktop: borders are missing.
 Or, you might simply not be comfortable installing an AUR package.
 
 ## Prerequisites
 
-You need to have Docker up and running on a Linux machine.
+You need to have Docker up and running on a Linux machine, and the current user must be allowed to run containers (this usually means that the current user belongs to the "docker" group).
+You can verify whether your user belongs to the "docker" group with the following command:
 
-All of this has been tested on:
+`getent group | grep docker`
+
+This command will output one line if the current user does belong to the "docker" group, otherwise there will be no output.
+
+The Dockerfile and the incluted scripts have been tested on the following distros: 
 
 - Manjaro Linux with Gnome (amd64)
 
