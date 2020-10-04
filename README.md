@@ -47,4 +47,6 @@ You can install the menu entry by running the included convenience script. Open 
 
 `sh create-desktop-entry.sh`
 
+This script will copy the "run-upplay-docker" script to "$HOME/.local/bin/", copy the icon "upplay-docker.png" to "$HOME/.local/share/icons/", then copy the desktop file "upplay-docker.desktop" to "$HOME/.local/share/applications/".
+
 On Gnome, just wait a few seconds and the new application will be available.
