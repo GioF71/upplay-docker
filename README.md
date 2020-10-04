@@ -20,7 +20,7 @@ You can verify whether your user belongs to the "docker" group with the followin
 
 This command will output one line if the current user does belong to the "docker" group, otherwise there will be no output.
 
-The Dockerfile and the incluted scripts have been tested on the following distros: 
+The Dockerfile and the incluted scripts have been tested on the following distros:
 
 - Manjaro Linux with Gnome (amd64)
 
@@ -28,11 +28,11 @@ As I test the Dockerfile on more platforms, I will update this list.
 
 ## Usage
 
-So, just open a terminal and issue the following to build the image
+You can build (or rebuild) the image by opening a terminal and issuing the following command:
 
 `docker build . -t upplay`
 
-It will take a while. When it's finished, run from a terminal:
+It will take a while. When it's finished, run:
 
 `docker run --rm --user $(id -u):$(id -g) -it -e DISPLAY=:0.0 --net=host --volume=${HOME}/.Xauthority:/config/.Xauthority:rw --volume ${HOME}/.config/Upmpd.org:/config/.config/Upmpd.org upplay`
 
@@ -42,6 +42,7 @@ You can avoid the dependency with the terminal which started upplay by detaching
 
 ## Menu Entry Installation
 
+If the application runs properly with the previous command, you might want to be able to launch it by your desktop environment.
 You can install the menu entry by running the included convenience script. Open a terminal and issue the following:
 
 `sh create-desktop-entry.sh`
