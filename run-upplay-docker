@@ -1,2 +1,3 @@
 #!/bin/sh
-/usr/bin/docker run -d --rm --user $(id -u):$(id -g) -e DISPLAY=:0.0 --net=host --volume=$HOME/.Xauthority:/config/.Xauthority:rw --volume=$HOME/.config/Upmpd.org:/config/.config/Upmpd.org upplay
+/usr/bin/docker volume create upplay_config
+/usr/bin/docker run -d --rm --user $(id -u):$(id -g) -e DISPLAY=:0.0 --net=host --volume=$HOME/.Xauthority:/root/.Xauthority:ro --volume=upplay_config:/root/.config/Upmpd.org:rw upplay

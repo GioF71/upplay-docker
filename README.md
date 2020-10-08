@@ -28,17 +28,26 @@ As I test the Dockerfile on more platforms, I will update this list.
 
 ## Usage
 
-You can build (or rebuild) the image by opening a terminal and issuing the following command:
+You can build (or rebuild) the image by opening a terminal from the root of the repository and issuing the following command:
 
-`docker build . -t upplay`
+`sh build`
 
 It will take a while. When it's finished, run:
 
-`docker run --rm --user $(id -u):$(id -g) -it -e DISPLAY=:0.0 --net=host --volume=${HOME}/.Xauthority:/config/.Xauthority:rw --volume ${HOME}/.config/Upmpd.org:/config/.config/Upmpd.org upplay`
+`docker volume create upplay_config`
+`docker run --rm --user $(id -u):$(id -g) -it -e DISPLAY=:0.0 --net=host --volume=${HOME}/.Xauthority:/config/.Xauthority:ro --volume upplay_config:/root/.config/Upmpd.org upplay`
 
-This command should generally work. You might need to tweak the DISPLAY variable value, and of course binding "/config/.config/Upmpd.org" is definitely not mandatory if you don't need to maintain the configuration settings.
+This command should generally work. You might need to tweak the DISPLAY variable value, and of course binding "/root/.config/Upmpd.org" is definitely not mandatory if you don't need to maintain the configuration settings.
 
 You can avoid the dependency with the terminal which started upplay by detaching the process, just add '-d' after 'run' in the previous command.
+
+Alternatively, you can just run the convenience scripts
+
+`sh run-upplay-docker`
+
+In case of need, you can reset your upplay configuration by typing:
+
+`sh reset-prefs`
 
 ## Menu Entry Installation
 

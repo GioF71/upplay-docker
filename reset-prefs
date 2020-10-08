@@ -1,0 +1,3 @@
+#!/bin/sh
+/usr/bin/docker volume rm upplay_config
+/usr/bin/docker volume create upplay_config

@@ -13,17 +13,13 @@ RUN apt-get install upplay -y
 
 RUN rm -rf /var/lib/apt/lists/*
 
-ENV UPPLAY_HOME_FOLDER=/config
+RUN mkdir -p /root/.config/Upmpd.org
 
-RUN groupadd upplay -g 1024
-RUN useradd -d ${UPPLAY_HOME_FOLDER} -s /bin/bash -m upplay -u 1024 -g 1024
+RUN chmod 777 /root
+RUN chmod 777 -R /root/.config
 
-USER upplay
-
-RUN mkdir -p "${UPPLAY_HOME_FOLDER}/.config/Upmpd.org"
-
-ENV HOME=${UPPLAY_HOME_FOLDER}
-ENV XDG_RUNTIME_DIR=${UPPLAY_HOME_FOLDER}
+ENV HOME=/root
+ENV XDG_RUNTIME_DIR=/root
 
 RUN echo "${HOME}"
 RUN echo "${XDG_RUNTIME_DIR}"
