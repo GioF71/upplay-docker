@@ -54,7 +54,7 @@ In case of need, you can reset your upplay configuration by typing:
 If the application runs properly with the previous command, you might want to be able to launch it by your desktop environment.
 You can install the menu entry by running the included convenience script. Open a terminal and issue the following:
 
-`sh create-desktop-entry.sh`
+`sh create-desktop-entry`
 
 This script will copy the "run-upplay-docker" script to "$HOME/.local/bin/", copy the icon "upplay-docker.png" to "$HOME/.local/share/icons/", then copy the desktop file "upplay-docker.desktop" to "$HOME/.local/share/applications/".
 
