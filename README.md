@@ -4,7 +4,7 @@
 
 First and foremost, the reference to the awesome project:
 
-https://www.lesbonscomptes.com/upplay/
+[upplay](https://www.lesbonscomptes.com/upplay/)
 
 ## Why
 
@@ -34,7 +34,7 @@ You can build (or rebuild) the image by opening a terminal from the root of the 
 
 It will take a while. When it's finished, run:
 
-`docker volume create upplay_config`
+`docker volume create upplay_config`  
 `docker run --rm --user $(id -u):$(id -g) -it -e DISPLAY=:0.0 --net=host --volume=${HOME}/.Xauthority:/config/.Xauthority:ro --volume upplay_config:/root/.config/Upmpd.org upplay`
 
 This command should generally work. You might need to tweak the DISPLAY variable value, and of course binding "/root/.config/Upmpd.org" is definitely not mandatory if you don't need to maintain the configuration settings.
@@ -59,3 +59,9 @@ You can install the menu entry by running the included convenience script. Open 
 This script will copy the "run-upplay-docker" script to "$HOME/.local/bin/", copy the icon "upplay-docker.png" to "$HOME/.local/share/icons/", then copy the desktop file "upplay-docker.desktop" to "$HOME/.local/share/applications/".
 
 On Gnome, just wait a few seconds and the new application will be available.
+
+## Version History
+
+Date|Notes
+---|---
+2022-01-30|First release with some notes. Using bullseye-20220125-slim as the base image, fixed installation process

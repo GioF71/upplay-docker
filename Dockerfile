@@ -1,12 +1,13 @@
-from debian:buster-slim
+from library/debian:bullseye-20220125-slim
 
 RUN apt-get update
+RUN apt-get install wget -y
 RUN apt-get install apt-utils dirmngr ca-certificates -y
 
-RUN gpg --keyserver pool.sks-keyservers.net --recv-key F8E3347256922A8AE767605B7808CE96D38B9201
-RUN gpg --export '7808CE96D38B9201' | apt-key add -
+RUN mkdir -p /app/keyring
+RUN wget https://www.lesbonscomptes.com/pages/lesbonscomptes.gpg -O /usr/share/keyrings/lesbonscomptes.gpg
 
-COPY upmpdcli.list /etc/apt/sources.list.d/
+COPY upmpdcli-bullseye.list /etc/apt/sources.list.d/
 
 RUN apt-get update
 RUN apt-get install upplay -y
